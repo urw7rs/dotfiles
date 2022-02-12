@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = urw7rs
+	email = urw.7rs@icloud.com
+[init]
+	defaultBranch = main
