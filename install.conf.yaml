@@ -11,3 +11,4 @@
     ~/.zshrc:
       if: '[ `uname` = Linux ]'
       path: zshrc-linux
+    ~/.config/alacritty.yml: alacritty
