@@ -6,5 +6,4 @@
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
-
-
+    ~/.config/alacritty.yml: alacritty
