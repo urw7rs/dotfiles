@@ -56,3 +56,4 @@ set listchars=tab:>-,trail:-,nbsp:_
 set list
 
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_python_interpreter_path = '~/miniconda/bin/python'

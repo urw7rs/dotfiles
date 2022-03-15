@@ -1,3 +1,8 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
 - clean: ['~']
 
 - link:
@@ -8,7 +13,9 @@
     ~/.zshrc:
       if: '[ `uname` = Darwin ]'
       path: zshrc
+    ~/.config/alacritty.yml: alacritty
+
+- link:
     ~/.zshrc:
       if: '[ `uname` = Linux ]'
       path: zshrc-linux
-    ~/.config/alacritty.yml: alacritty
