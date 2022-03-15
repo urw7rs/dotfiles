@@ -55,3 +55,4 @@ set smarttab    " At <Tab> at beginning line inserts spaces set in shiftwidth
 set listchars=tab:>-,trail:-,nbsp:_
 set list
 
+let g:ycm_autoclose_preview_window_after_completion = 1
