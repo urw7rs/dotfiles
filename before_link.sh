@@ -19,11 +19,10 @@ then
 else
   if [[ $(uname) == "Linux" ]]
   then
-    # install oh-my-zsh
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
     sudo apt update
-    sudo apt install -y git \
+    sudo apt install -y zsh \
+                        tmux \
+                        git \
                         wget \
                         vim-gtk3 \
                         build-essential \
@@ -36,8 +35,15 @@ else
                         npm \
                         alacritty
 
+    # install oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
     bash Miniconda3-latest-Linux-x86_64.sh -b
   fi
 fi
+
+rm ~/.zshrc
+
+conda config --set auto_activate_base false
