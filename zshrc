@@ -125,3 +125,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Add Visual Studio Code (code)
+export PATH="/$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Add .NET Core SDK tools
+export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
