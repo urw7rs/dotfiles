@@ -112,21 +112,27 @@ export PATH=/opt/homebrew/bin:$PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/urw7rs/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/{$USER}/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/urw7rs/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/urw7rs/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/${USER}/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/${USER}/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/urw7rs/miniconda3/bin:$PATH"
+        export PATH="/Users/${USER}/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
 # Add Visual Studio Code (code)
-export PATH="/$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+#export PATH="/$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Add .NET Core SDK tools
-export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
+# export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/chanhyuk-jung/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/chanhyuk-jung/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/chanhyuk-jung/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chanhyuk-jung/google-cloud-sdk/completion.zsh.inc'; fi

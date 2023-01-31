@@ -13,18 +13,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-Plug 'doums/darcula'
+Plug 'morhetz/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'itchyny/lightline.vim'
-
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html', 'jsx'] }
-
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'rust-lang/rust.vim'
 
@@ -41,6 +35,13 @@ Plug 'sindrets/diffview.nvim'
 Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
+
+let g:coc_global_extensions = [
+  \ 'coc-json',
+  \ 'coc-prettier',
+  \ 'coc-eslint',
+  \ 'coc-pyright',
+  \]
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -65,19 +66,10 @@ if has('termguicolors')
     set termguicolors
 endif
 
-colorscheme darcula
+colorscheme gruvbox
 
-
-let g:lightline = {
-      \ 'colorscheme': 'darculaOriginal',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'absolutepath', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 
 set number
 set relativenumber
@@ -253,22 +245,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-hi! link CocErrorSign ErrorSign
-hi! link CocWarningSign WarningSign
-hi! link CocInfoSign InfoSign
-hi! link CocHintSign HintSign
-hi! link CocErrorFloat Pmenu
-hi! link CocWarningFloat Pmenu
-hi! link CocInfoFloat Pmenu
-hi! link CocHintFloat Pmenu
-hi! link CocHighlightText IdentifierUnderCaret
-hi! link CocHighlightRead IdentifierUnderCaret
-hi! link CocHighlightWrite IdentifierUnderCaretWrite
-hi! link CocErrorHighlight CodeError
-hi! link CocWarningHighlight CodeWarning
-hi! link CocInfoHighlight CodeInfo
-hi! link CocHintHighlight CodeHint
-
 "hi! link GitGutterAdd GitAddStripe
 "hi! link GitGutterChange GitChangeStripe
 "hi! link GitGutterDelete GitDeleteStripe
@@ -281,3 +257,5 @@ map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
 
 let g:OmniSharp_server_use_net6 = 1
+
+nnoremap <CR> :noh<CR><CR>

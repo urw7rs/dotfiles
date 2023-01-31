@@ -5,3 +5,5 @@
 	email = urw.7rs@icloud.com
 [init]
 	defaultBranch = main
+[core]
+	editor = nvim
