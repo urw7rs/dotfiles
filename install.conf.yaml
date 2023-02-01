@@ -3,19 +3,20 @@
       relink: true
       create: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.zshrc:
-      if: '[ `uname` = Darwin ]'
+      if: "[ `uname` = Darwin ]"
       path: zshrc
     ~/.config/alacritty.yml: alacritty
+    ~/.config/nvim/init.vim: init
+    ~/.config/nvim/coc-settings.json: coc-settings
 
 - link:
     ~/.zshrc:
-      if: '[ `uname` = Linux ]'
+      if: "[ `uname` = Linux ]"
       path: zshrc-linux
