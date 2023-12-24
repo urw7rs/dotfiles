@@ -1,11 +1,4 @@
-# dotfiles for vim, zsh, tmux
+# Dotfiles for kitty, fish, and tmux
 
-## Installation
-
-`./before_link.sh` installs zsh, vim, tmux and necessary packages
-
-`vim` to install vimplug packages
-
-`./install` to symlink dotfiles
-
-`./after_link.sh` installs plugins for oh-my-zsh and compiles youcompleteme
+1. Install kitty, fish and tmux.
+2. Make sure submodules are cloned, then run `./install`
