@@ -8,14 +8,3 @@
 - link:
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
-    ~/.vimrc: vimrc
-    ~/.zshrc:
-      if: '[ `uname` = Darwin ]'
-      path: zshrc
-    ~/.config/alacritty.yml: alacritty
-
-- link:
-    ~/.zshrc:
-      if: '[ `uname` = Linux ]'
-      path: zshrc-linux
