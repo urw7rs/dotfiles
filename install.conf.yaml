@@ -8,6 +8,6 @@
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.config/fish/config.fish: config.fish
-    ~/.config/kitty/theme.conf: kitty-themes/themes/gruvbox_dark.conf
+    ~/.config/kitty/theme.conf: rose-pine-kitty/dist/rose-pine.conf
     ~/.config/kitty/kitty.conf: kitty.conf
     ~/.config/nvim: nvim

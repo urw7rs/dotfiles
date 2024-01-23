@@ -2,9 +2,9 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "kitty-themes"]
-	path = kitty-themes
-	url = https://github.com/dexpota/kitty-themes.git
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/urw7rs/nvim.git
+[submodule "rose-pine-kitty"]
+	path = rose-pine-kitty
+	url = https://github.com/rose-pine/kitty.git
