@@ -12,6 +12,12 @@ set PATH $PATH /Users/cjung/.local/bin
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /Users/cjung/miniconda3/bin/conda
     eval /Users/cjung/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/Users/cjung/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/Users/cjung/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/Users/cjung/miniconda3/bin" $PATH
+    end
 end
 # <<< conda initialize <<<
 

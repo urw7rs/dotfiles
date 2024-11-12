@@ -8,6 +8,6 @@
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.config/fish/config.fish: config.fish
-    ~/.config/kitty/theme.conf: rose-pine-kitty/dist/rose-pine.conf
-    ~/.config/kitty/kitty.conf: kitty.conf
     ~/.config/nvim: nvim
+    ~/.config/alacritty: alacritty
+    ~/.config/alacritty/alacritty.toml: alacritty.toml
