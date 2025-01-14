@@ -4,10 +4,14 @@
 
 - clean: ['~']
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
 - link:
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
+
     ~/.config/fish/config.fish: config.fish
     ~/.config/nvim: nvim
     ~/.config/alacritty: alacritty
-    ~/.config/alacritty/alacritty.toml: alacritty.toml
+
